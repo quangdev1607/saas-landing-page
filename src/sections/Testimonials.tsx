@@ -93,9 +93,9 @@ const TColumn = (props: {
       className={"flex flex-col gap-6 pb-6"}
     >
       {[...new Array(2)].fill(0).map((_, index) => (
-        <Fragment>
+        <Fragment key={index}>
           {props.t.map((t) => (
-            <div className="card">
+            <div key={t.name} className="card">
               <span>{t.text}</span>
               <div className="mt-5 flex items-center gap-2">
                 <Image
